@@ -44,7 +44,7 @@
     <v-row class="justify-center pb-12">
       <v-col cols="12">
         <div v-if="i == 0" class="text-center text-subtitle-2">スマホ</div>
-        <div v-if="i == 1" class="text-center text-subtitle-2">パソコン</div>
+        <div v-else-if="i == 1" class="text-center text-subtitle-2">パソコン</div>
       </v-col>
       <template v-for="item in report">
       <v-col cols="auto">
