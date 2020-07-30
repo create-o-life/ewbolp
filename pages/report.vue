@@ -15,7 +15,7 @@
     <v-row class="justify-center pb-16">
       <v-col cols="auto">
         <v-btn
-          href="`https://ewbolp.create-o-life.com/?checked=%E3%81%94%E8%B3%AA%E5%95%8F&selected=WEB%E3%82%B5%E3%82%A4%E3%83%88%E8%A8%BA%E6%96%AD&content=${$route.query.url}%E8%A9%B3%E7%B4%B0%E8%A9%95%E4%BE%A1%E7%A2%BA%E8%AA%8D#contact`"
+          :href="`https://ewbolp.create-o-life.com/?checked=%E3%81%94%E8%B3%AA%E5%95%8F&selected=WEB%E3%82%B5%E3%82%A4%E3%83%88%E8%A8%BA%E6%96%AD&content=${$route.query.url}%E8%A9%B3%E7%B4%B0%E8%A9%95%E4%BE%A1%E7%A2%BA%E8%AA%8D#contact`"
           :color="color.btn.bg"
           :style="`color:${color.btn.txt};`"
           block
@@ -74,7 +74,7 @@
     <v-row class="justify-center pb-16">
       <v-col cols="auto">
         <v-btn
-          href="`https://ewbolp.create-o-life.com/?checked=%E3%81%94%E8%B3%AA%E5%95%8F&selected=WEB%E3%82%B5%E3%82%A4%E3%83%88%E8%A8%BA%E6%96%AD&content=${$route.query.url}%E8%A9%B3%E7%B4%B0%E8%A9%95%E4%BE%A1%E7%A2%BA%E8%AA%8D#contact`"
+          :href="`https://ewbolp.create-o-life.com/?checked=%E3%81%94%E8%B3%AA%E5%95%8F&selected=WEB%E3%82%B5%E3%82%A4%E3%83%88%E8%A8%BA%E6%96%AD&content=${$route.query.url}%E8%A9%B3%E7%B4%B0%E8%A9%95%E4%BE%A1%E7%A2%BA%E8%AA%8D#contact`"
           :color="color.btn.bg"
           :style="`color:${color.btn.txt};`"
           block
