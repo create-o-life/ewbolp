@@ -164,14 +164,20 @@ export default {
         }
       }
       var menus = sections.filter(x => x.menu)
-      return [{
-        route: '/',
-        payload:{
-          sections: sections,
-          menus: menus,
-          layout: layout
+      return [
+        {
+          route: '/',
+          payload:{
+            sections: sections,
+            menus: menus,
+            layout: layout
+          }
+        },
+        {
+          route: '/report',
+          payload:''
         }
-      }]
+      ]
     }
   },
   sitemap: {
