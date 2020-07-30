@@ -145,21 +145,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-    extractCSS: !dev,
-    postcss: {
-      plugins: {
-        '@fullhuman/postcss-purgecss': dev ? false : {
-          content: [
-            './pages/**/*.vue',
-            './layouts/**/*.vue',
-            './components/**/*.vue',
-            './node_modules/vuetify/dist/vuetify.js'
-          ],
-          whitelist: ['html', 'body', 'nuxt-progress'],
-          whitelistPatternsChildren: [ /^v\-/ ]
-        }
-      }
-    }
   },
   generate: {
     routes: async function () {
