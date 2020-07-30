@@ -342,19 +342,31 @@
                     </v-col>
                     <v-col
                       v-if="section.assessment"
+                      cols="12"
                     >
-                      <v-text-field
-                        v-model="url"
-                        label="サイトURL"
-                      ></v-text-field>
-                      <v-btn
-                        :to="`/report?url=${url}`"
-                        :color="color.btn.bg"
-                        :style="`color:${color.btn.txt};`"
-                        nuxt
-                      >
-                        確認する
-                      </v-btn>
+                      <v-row no-gutters class="justify-center">
+                        <v-col cols="12" sm="6">
+                          <v-text-field
+                            v-model="url"
+                            label="サイトURLを貼り付け"
+                            :background-color="color.contact.input"
+                            outlined
+                          ></v-text-field>
+                        </v-col>
+                        </v-row>
+                        <v-row no-gutters class="justify-center">
+                        <v-col cols="auto">
+                          <v-btn
+                            :to="`/report?url=${url}`"
+                            :color="color.btn.bg"
+                            :style="`color:${color.btn.txt};`"
+                            large
+                            nuxt
+                          >
+                            確認する
+                          </v-btn>
+                        </v-col>
+                      </v-row>
                     </v-col>
                 </v-row>
             </v-container>
@@ -390,6 +402,7 @@ export default {
     },
     methods: {
         move (link) {
+            console.log(link)
             if (link.includes('http')) {
                 return window.open(link, '_blank')
             }
@@ -399,6 +412,17 @@ export default {
             else {
                 return this.$router.push(link)
             }
+        },
+        inputContact () {
+          if (this.$route.query.checked) {
+            this.checked = [this.$route.query.checked]
+          }
+          if (this.$route.query.selected) {
+            this.selected = [this.$route.query.selected]
+          }
+          if (this.$route.query.content) {
+            this.content = this.$route.query.content
+          }
         }
     },
     computed: {
@@ -433,6 +457,13 @@ export default {
         items () {
             return process.env.contactComboItems.split(',')
         }
+    },
+    mounted () {
+      this.inputContact()
+    },
+    beforeRouteUpdate(to, from, next) {
+      next()
+      this.inputContact()
     },
     props: ['section']
 }

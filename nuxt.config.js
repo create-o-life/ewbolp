@@ -172,10 +172,6 @@ export default {
             menus: menus,
             layout: layout
           }
-        },
-        {
-          route: '/report',
-          payload:''
         }
       ]
     }
@@ -188,5 +184,13 @@ export default {
   googleAnalytics: {
     id: analyticsId
   },
-  loading: '~/components/loading.vue'
+  loading: '~/components/loading.vue',
+  manifest: {
+    title: siteName,
+    'og:title': siteName,
+    description: siteDesc,
+    'og:description': siteDesc,
+    lang: 'ja',
+    theme_color: process.env.NUXT_ENV_COLOR_BTN_BG
+  }
 }
