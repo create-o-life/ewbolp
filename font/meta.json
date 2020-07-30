@@ -1,0 +1,34 @@
+[
+  {
+    "name": "checkbox-blank-outline",
+    "codepoint": "F0131"
+  },
+  {
+    "name": "checkbox-marked",
+    "codepoint": "F0132"
+  },
+  {
+    "name": "chevron-left",
+    "codepoint": "F0141"
+  },
+  {
+    "name": "chevron-right",
+    "codepoint": "F0142"
+  },
+  {
+    "name": "circle",
+    "codepoint": "F0765"
+  },
+  {
+    "name": "home",
+    "codepoint": "F02DC"
+  },
+  {
+    "name": "menu",
+    "codepoint": "F035C"
+  },
+  {
+    "name": "menu-down",
+    "codepoint": "F035D"
+  }
+]
