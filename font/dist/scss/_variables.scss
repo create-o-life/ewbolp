@@ -1,0 +1,19 @@
+$mdi-filename:         "materialdesignicons";
+$mdi-font-name:        "Material Design Icons";
+$mdi-font-family:      "materialdesignicons";
+$mdi-font-weight:      "undefined";
+$mdi-font-path:        "../fonts" !default;
+$mdi-font-size-base:   24px !default;
+$mdi-css-prefix:       mdi !default;
+$mdi-version:          "0.0.1" !default;
+
+$mdi-icons: (
+  "checkbox-blank-outline": F0131,
+  "checkbox-marked": F0132,
+  "chevron-left": F0141,
+  "chevron-right": F0142,
+  "circle": F0765,
+  "home": F02DC,
+  "menu": F035C,
+  "menu-down": F035D
+);
