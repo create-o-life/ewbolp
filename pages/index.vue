@@ -53,13 +53,17 @@
             >
               <v-list-item-title>{{ menu.section.title }}</v-list-item-title>
             </v-list-item>
+            <v-list-item
+                @click="move('https://contact.create-o-life.com/')"
+            >
+              <v-list-item-title>お問い合わせ</v-list-item-title>
+            </v-list-item>
           </v-list>
         </v-menu>
         
         <v-toolbar-items v-else>
             <template v-for="menu in menus">
             <v-btn
-                v-if="menu.section.id != 'contact'"
                 @click="move(menu.section.id)"
                 color="transparent"
                 :small="$vuetify.breakpoint.sm"
@@ -68,9 +72,10 @@
             >
                 <span>{{ menu.section.title }}</span>
             </v-btn>
-            <div v-else class="d-flex">
+            </template>
+            <div class="d-flex">
                 <v-btn
-                    @click="move(menu.section.id)"
+                    @click="move('https://contact.create-o-life.com/')"
                     :color="color.header.contact"
                     :small="$vuetify.breakpoint.sm"
                     class="align-self-center"
@@ -78,10 +83,9 @@
                     outlined
                     nuxt
                 >
-                    {{ menu.section.title }}
+                    お問い合わせ
                 </v-btn>
             </div>
-            </template>
         </v-toolbar-items>
     </v-app-bar>
 
