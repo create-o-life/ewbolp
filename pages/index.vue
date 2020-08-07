@@ -173,7 +173,12 @@ export default {
             }
         },
         move (id) {
-            return this.$vuetify.goTo(`#${id}`, this.option)
+            if (id.includes('http')) {
+                window.location = id
+            }
+            else {
+                return this.$vuetify.goTo(`#${id}`, this.option)
+            }
         }
     },
     computed: {
